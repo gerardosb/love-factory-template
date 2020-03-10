@@ -1,0 +1,19 @@
+// the base file is meant to contain the very basics, meaning the styles for html and body elements and resets
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* The root font size is set in the html element */
+html {
+  // this defines what 1rem is = 10px
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  /* box-sizing borderbox permite que el width y height de los elementos sea el definido y no sume padding ni margin */
+}

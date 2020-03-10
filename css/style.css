@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* The root font size is set in the html element */
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  /* box-sizing borderbox permite que el width y height de los elementos sea el definido y no sume padding ni margin */ }
+
+body {
+  /* Todo lo relacionado a las fonts debe ser declarado en el body para luego ser heredado */
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    display: block;
+    animation: moveInLeft 1s ease-out;
+    /* animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; */ }
+  .heading-primary--sub {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.7rem;
+    display: block;
+    animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff4081, #c51162);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.1s;
+  letter-spacing: 2px;
+  display: inline-block; }
+  .heading-secondary:hover {
+    transform: skewY(3deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-top-xl {
+  margin-top: 10rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
+.navigation {
+  padding: 5rem; }
+  .navigation__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+  .navigation__item {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    color: white; }
+    .navigation__item:not(:last-child) {
+      margin-right: 5vw; }
+  .navigation__link:link, .navigation__link:visited {
+    color: #f7f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2; }
+  .navigation__link:hover, .navigation__link:active {
+    box-shadow: 0 1rem 2 rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3);
+    background-color: #c51162; }
+  .navigation__logo {
+    font-size: 8rem;
+    color: #c51162; }
+  .navigation__icon {
+    text-align: center; }
+  .navigation__icon-svg {
+    width: 10%; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 64, 129, 0.8), rgba(197, 17, 98, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 5rem;
+    left: 5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header__logo {
+    height: 3rem; }
+  .header__icon {
+    text-align: center; }
+  .header__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%; }
+  .header__column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%; }
+    .header__column-1 {
+      flex: 2; }
+    .header__column-2 {
+      flex: 3; }
+  .header__welcome {
+    padding: 1rem 3rem;
+    margin-left: 6rem; }
+    .header__welcome-title {
+      text-align: center;
+      font-size: 5rem;
+      color: #fff; }
+    .header__welcome-paragraph {
+      text-align: justify;
+      font-size: 2rem;
+      color: #fff; }
+      .header__welcome-paragraph:not(:last-child) {
+        margin-bottom: 3rem; }
+  .header__icon {
+    position: relative; }
+    .header__icon-machine {
+      width: 40%; }
+    .header__icon-gift {
+      position: absolute;
+      width: 20%; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(255, 64, 129, 0.8), rgba(197, 17, 98, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -15vh; }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -15vh; }
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0; }
